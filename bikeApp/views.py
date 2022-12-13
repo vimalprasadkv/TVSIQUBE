@@ -206,5 +206,7 @@ def imagesc(request):
     return render(request,"imagesc.html")
 def aboutc(request):
     return render(request,"aboutc.html")
+def aboutb(request):
+    return render(request,"aboutc.html")
     
    
