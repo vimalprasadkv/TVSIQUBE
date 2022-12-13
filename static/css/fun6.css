@@ -1,0 +1,10 @@
+body{
+    background-image: url("/static/imges/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    padding: 20px;
+    display: flex;
+    justify-content:space-evenly;
+}

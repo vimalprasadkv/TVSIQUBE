@@ -1,0 +1,26 @@
+
+    {% extends "commonbase.html" %}
+    {% block start %}
+    
+    <link rel="stylesheet" href="/static/css/fun5.css">
+
+    <h3 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;
+    font-family: 'Oswald', sans-serif;">COLOUR SELECTION</h3>
+    <div class="main">
+      {% for u in vehicles %}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/static/media/{{u.img}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{u.vehicle}}</h5>
+              <h6>Vehicle colour:{{u.vehicle_color}}</h6>
+              <h6>Vehicle Description:{{u.vehicle_desc}}</h6>
+              <h5 style="color: blue;">Vehicle Rate:{{u.rate}}</h5>
+              <h6>Vehicle stock:{{u.stock}}</h6>
+              <h6>Updated Date:{{u.regDte}}</h6>
+              <a href="login" class="btn btn-primary">BOOK NOW</a>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endblock %}

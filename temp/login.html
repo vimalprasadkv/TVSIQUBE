@@ -1,0 +1,33 @@
+
+    {% extends "commonbase.html" %}
+    {% block start %}
+    
+    <link rel="stylesheet" href="/static/css/fun2.css">
+<body>
+  <h3 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+  font-family: 'Freehand', cursive;
+  font-family: 'Oswald', sans-serif;">LOGIN</h3>
+          <div class="main">
+            <form method="POST">
+              {%csrf_token%}
+              <div class="form-group">
+                <label for="exampleInputEmail1">User name</label>
+                <input type="text" name="uname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" required>
+                <small id="emailHelp"  class="form-text text-muted">We'll never share your username with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="enter  password" required>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" name='login' class="btn btn-danger" style="width: 30%; margin-left: 30%;">Login</button>
+            </form>
+            <div class="row">
+              <img src="/static/imges/tvs11.png" style="width: 400px;">
+            </div>
+          </div>
+          {% endblock %}
+          

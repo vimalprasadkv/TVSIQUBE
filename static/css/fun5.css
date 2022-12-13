@@ -1,0 +1,12 @@
+body{
+    background-image: url("/static/imges/back.jpg");
+}
+.navbar-expand{
+    margin-left: 72%;
+}
+.main{
+    padding: 20px;
+    display: flex;
+    justify-content:space-evenly;
+}
+

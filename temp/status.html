@@ -1,0 +1,35 @@
+{% extends "customerbase.html" %}
+{% block start %}
+<link rel="stylesheet" href="/static/css/fun4.css">
+<h3 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;font-family: 'Oswald', sans-serif;">BOOKING STATUS</h3>
+<table class="table table-secondary table-stripped" style="padding: 20px;">
+    <tr>
+        <th>User id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile Number</th>
+        <th>Register Date</th>
+        <th>ID proof</th>
+        <th>Vehicle Colour</th>
+        <th>Status</th>
+    </tr>
+    {% for u in sta %}
+    <tr>
+        <td>{{u.id}}</td>
+        <td>{{u.user.first_name}}</td>
+        <td>{{u.user.address}}</td>
+        <td>{{u.user.mobile_number}}</td>
+        <td>{{u.regDte}}</td>
+        <td><img src="/static/imges/{{u.id_proof}}" style="width: 100px;" alt="Error img"></td>
+        <td>{{u.vehicles.vehicle_color}}</td>
+        <td>{{u.status}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    <h4 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;font-family: 'Oswald', sans-serif;color: blue;">HELPING CONTACT:</h4>
+    <h5 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;font-family: 'Oswald', sans-serif;">18002587555</h5>
+    
+{% endblock %}

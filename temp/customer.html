@@ -1,0 +1,36 @@
+{% extends "adminbase.html" %}
+{% block start %}
+
+<div class="all" style="padding: 20px;">
+    
+    <h3 style="font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;
+    font-family: 'Oswald', sans-serif;">CUSTOMER DETAILS</h3> 
+    <table class="table table-secondary table-stripped" style="padding: 20px;">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>User name</th>
+            <th>Address</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th>State</th>
+            <th>zip</th>
+            <th>Reg date</th>
+        </tr>
+        {% for u in usr %}
+        <tr>
+            <td>{{u.first_name}}</td>
+            <td>{{u.last_name}}</td>
+            <td>{{u.user_name}}</td>
+            <td>{{u.address}}</td>
+            <td>{{u.mobile_number}}</td>
+            <td>{{u.City}}</td>
+            <td>{{u.state}}</td>
+            <td>{{u.zip}}</td>
+            <td>{{u.regDte}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+body{
+    background-image: url("/static/imges/tvs.jpg");
+    background-repeat: no-repeat;
+    background-position:unset;
+    background-size: cover;
+}
+.head h1{
+    padding: 20px;
+}
+.navbar-expand{
+    margin-left: 72%;
+}
+h2{
+    font-family: 'Freehand', cursive;
+    padding: 20px;
+}

@@ -1,0 +1,54 @@
+{% extends "adminbase.html" %}
+{% block start %}
+
+<div class="all" style="padding: 20px;">
+    
+    <h3 style="font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;
+    font-family: 'Oswald', sans-serif;">CUSTOMER DETAILS</h3> 
+    <table class="table table-secondary table-stripped" style="padding: 20px;">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Address</th>
+            <th>Mobile Number</th>
+            <th>City</th>
+            <th>State</th>
+            <th>zip</th>
+           
+            <th>Vehicle Model </th>
+            <th>Vehicle Colour </th>
+            <th>Vehicle desc </th>
+            <th>Rate </th>
+            <th>ID Proof</th>
+            <th>Reg date</th>
+            <th>Enquiry Date</th>
+            <th colspan="2">Approve/Reject</th>
+        </tr>
+        {% for u in vehicles %}
+        <tr>
+            <td>{{u.user.first_name}}</td>
+            <td>{{u.user.last_name}}</td>
+            <td>{{u.user.address}}</td>
+            <td>{{u.user.mobile_number}}</td>
+            <td>{{u.user.City}}</td>
+            <td>{{u.user.state}}</td>
+            <td>{{u.user.zip}}</td>
+            <td>{{u.vehicles.vehicle}}</td>
+            <td>{{u.vehicles.vehicle_color}}</td>
+            <td>{{u.vehicles.vehicle_desc}}</td>
+            <td>{{u.vehicles.rate}}</td>
+            <td><img src="/static/imges/{{u.id_proof}}" style="width: 100px;" alt="Error img"></td>
+            <td>{{u.regDte}}</td>
+            <td>{{u.date}}</td>
+            <td>
+                <a href="/approvereject?id={{u.id}}&status=Approved" class="btn btn-success">Approve</a>
+            </td>
+            <td>
+                <a href="/approvereject?id={{u.id}}&status=Rejected"class="btn btn-danger">Reject</a>
+            </td>
+        </tr>
+        {% endfor %}
+        </table>
+</div>
+{% endblock %}

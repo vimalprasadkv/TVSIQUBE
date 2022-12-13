@@ -1,0 +1,24 @@
+body{
+    background-image: url("/static/imges/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar-expand{
+    margin-left: 72%;
+}
+.all{
+    width: 500px;
+    padding: 20px;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row{
+    margin-right: 20%;
+    
+}
+.row img{
+    width: 500px;
+}

@@ -1,0 +1,28 @@
+body{
+    background-image: url("/static/imges/back.jpg");
+}
+.navbar-expand{
+    margin-left: 72%;
+}
+.main{
+    background-color: red;
+    width: 20%;
+  
+    margin-left: 20%;
+    text-align: center;
+}
+#about{
+    padding: 20px;
+}
+.view{
+    display: flex;
+    justify-content: space-between;
+}
+.guf{
+    display: flex;
+    justify-content: space-between;
+}
+.all{
+    display: flex;
+    justify-content: space-between;
+}

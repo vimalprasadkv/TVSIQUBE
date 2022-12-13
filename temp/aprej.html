@@ -1,0 +1,61 @@
+{% extends "adminbase.html" %}
+    {% block start %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Freehand&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/fun4.css">
+    
+    <h3 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;font-family: 'Oswald', sans-serif;">APPROVED</h3>
+<table class="table table-secondary table-stripped" style="padding: 20px;">
+    <tr>
+        <th>User id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile Number</th>
+        <th>Register Date</th>
+        <th>ID proof</th>
+        <th>Vehicle ID</th>
+        <th>Status</th>
+    </tr>
+    {% for u in app %}
+    <tr>
+        <td>{{u.id}}</td>
+        <td>{{u.user.first_name}}</td>
+        <td>{{u.user.address}}</td>
+        <td>{{u.user.mobile_number}}</td>
+        <td>{{u.regDte}}</td>
+        <td>{{u.id_proof}}</td>
+        <td>{{u.vehicles_id}}</td>
+        <td>{{u.status}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    <h3 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;font-family: 'Oswald', sans-serif;">REJECTED</h3>
+    <table class="table table-secondary table-stripped" style="padding: 20px;">
+        <tr>
+            <th>User id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Mobile Number</th>
+            <th>Register Date</th>
+            <th>ID proof</th>
+            <th>Vehicle ID</th>
+            <th>Status</th>
+        </tr>
+        {% for u in rej %}
+        <tr>
+            <td>{{u.id}}</td>
+            <td>{{u.user.first_name}}</td>
+            <td>{{u.user.address}}</td>
+            <td>{{u.user.mobile_number}}</td>
+            <td>{{u.regDte}}</td>
+            <td>{{u.id_proof}}</td>
+            <td>{{u.vehicles_id}}</td>
+            <td>{{u.status}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+
+{% endblock %}

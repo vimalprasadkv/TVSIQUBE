@@ -1,0 +1,70 @@
+{% extends "customerbase.html" %}
+{% block start %}
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Freehand&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/fun4.css">
+    
+    <h3 style="padding: 20px;font-family: 'Fjalla One', sans-serif;
+    font-family: 'Freehand', cursive;font-family: 'Oswald', sans-serif;">PROFILE</h3>
+  
+<form method="POST" style="width: 60%; margin:auto; border: 2px solid black; padding: 20px;">
+    {%csrf_token%}
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">First name</label>
+      <input type="text" name='fname' value="{{cust.first_name}}" class="form-control" id="inputEmail4" placeholder="Enter firstname">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Last name</label>
+      <input type="text" name='lname'class="form-control" value="{{cust.last_name}}" id="inputPassword4" placeholder="enter lastname">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Username</label>
+      <input type="text" name='uname' value="{{cust.user_name}}" class="form-control" id="inputEmail4" placeholder="Enter username">
+    </div>
+    
+  
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" name='address' value="{{cust.address}}" class="form-control" id="inputAddress" placeholder="enter address">
+  </div>
+  <div class="form-group"style="margin-left :14px;;">
+    <label for="inputAddress2">Mobile Number</label>
+    <input type="text" name='phone' value="{{cust.mobile_number}}" class="form-control" id="inputAddress2" placeholder="enter phonenumber" maxlength="10">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" name='city' value="{{cust.city}}" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCity">State</label>
+      <input type="text" name='state' value="{{cust.state}}" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCity">Zip</label>
+      <input type="text" name='zip' value="{{cust.zip}}" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCity">Register date</label>
+      <input type="text" name='regDte' value="{{cust.regDte}}" class="form-control" id="inputCity">
+    </div>
+    <div class="submit">
+      <input type="submit" class="btn btn-warning" style="width: 90px;" value="Update">
+    </div>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

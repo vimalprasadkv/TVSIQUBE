@@ -1,0 +1,21 @@
+body{
+    background-image: url("/static/imges/back.jpg");
+}
+.navbar-expand{
+    margin-left: 72%;
+}
+img{
+    width: 90%;
+    margin: auto;
+}
+.sub{
+    width: 70%;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.field{
+    margin-right: 50px;
+}
+
